@@ -3,7 +3,7 @@ resource "aws_instance" "tomcat" {
     instance_type = var.instance_type_t2micro
     key_name = var.key_name
     security_groups = ["jenkins"]
-    user_data = file("tomcat.sh")
+    user_data = file("./tomcat.sh")
     tags={
         Name = "${var.tomcat}-insatance"
     }
