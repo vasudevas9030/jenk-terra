@@ -7,7 +7,7 @@ resource "aws_instance" "main" {
       volume_size = "10"
       volume_type = "gp3"
     }
-    user_data = file("jenk.sh")
+    user_data = file("./jenk.sh")
     tags={
         Name = "${var.prefix}-insatance"
     }
